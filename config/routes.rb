@@ -1,8 +1,11 @@
+# config/routes.rb
 Rails.application.routes.draw do
+  get 'ask', to: 'coaching#ask'
+  get 'answer', to: 'coaching#answer'
 
-  get 'answer' => 'coaching#answer'
-
-  get 'ask' => 'coaching#ask'
+  # Generic syntax:
+  # verb 'path', to: 'controller#action' (action is an instance method)
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -58,4 +61,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

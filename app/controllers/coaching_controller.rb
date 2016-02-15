@@ -1,7 +1,15 @@
 class CoachingController < ApplicationController
-  def answer
-  end
+ def ask
 
-  def ask
-  end
+ end
+
+ def answer
+    params[:question]
+   if params[:question] == "j'y vais"
+    @answer = 'BRAVO tu déchires'
+   else
+     @answer = "I don't care, get dressed and go to work!"
+   end
+ end
+
 end
